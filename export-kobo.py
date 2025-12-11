@@ -48,7 +48,7 @@ class Item:
         if colors and 0 <= self.color < len(colors):
             color_prefix = f"{colors[self.color]} "
         if self.kind == self.ANNOTATION:
-            return f"> {color_prefix}{self.text}{debug_info}\n\n- {self.annotation}\n\n"
+            return f"> {color_prefix}{self.text}{debug_info}\n- {self.annotation}\n\n"
         elif self.kind == self.HIGHLIGHT:
             return f"> {color_prefix}{self.text}{debug_info}\n\n"
         return ""
@@ -161,7 +161,8 @@ class ExportKobo:
 
         output = book.to_markdown()
         for chapter in sorted_chapters:
-            output += f"\n### {chapter}\n\n"
+            output = output.rstrip('\n') + '\n'
+            output += f"### {chapter}\n"
             for item in chapters[chapter]:
                 output += item.markdown(debug=debug, colors=colors)
 

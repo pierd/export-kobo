@@ -43,13 +43,10 @@ title: Alice in Wonderland
 author: Lewis Carroll
 ---
 # "Alice in Wonderland" by Lewis Carroll
-
 ### CHAPTER II. The Pool of Tears
-
 > 🟡 "Curiouser and curiouser!" cried Alice (she was so much surprised, that for the moment she quite forgot how to speak good English);
 
 > 🔴 Poor Alice!
-
 - My annotation about this passage
 ```
 
